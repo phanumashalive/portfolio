@@ -1,1 +1,12 @@
+title: "Phanumash Portfolio"
+description: "ครูคอมพิวเตอร์ & สังคมศึกษา | นักพัฒนา App | นักเขียน "
+url: "https://github.com/phanumashalive/portfolio"
+baseurl: "/portfolio"
+author: Phanumash Phukan
+email: phanumash.alive@gmail.com
 
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
