@@ -1,1 +1,19 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <h1>สวัสดี ผมชื่อ [Phanumash Phukan]</h1>
+  <p>ครูคอมพิวเตอร์และสังคมศึกษา | นักพัฒนา App | นักเขียนนิยาย</p>
+</section>
 
+<section class="posts">
+  <h2>บันทึกล่าสุด</h2>
+  {% for post in site.posts limit:6 %}
+  <article>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p>{{ post.date | date: "%d %B %Y" }}</p>
+    <p>{{ post.excerpt }}</p>
+  </article>
+  {% endfor %}
+</section>
