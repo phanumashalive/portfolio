@@ -1,1 +1,31 @@
+backend:
+  name: github
+  repo: phanumashalive/portfolio
+  branch: main
 
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "posts"
+    label: "บล็อก / บันทึก"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "หัวข้อ", name: "title", widget: "string"}
+      - {label: "วันที่", name: "date", widget: "datetime"}
+      - {label: "หมวดหมู่", name: "categories", widget: "list"}
+      - {label: "รูปปก", name: "image", widget: "image", required: false}
+      - {label: "เนื้อหา", name: "body", widget: "markdown"}
+
+  - name: "projects"
+    label: "โครงงาน"
+    folder: "_projects"
+    create: true
+    fields:
+      - {label: "ชื่อโครงงาน", name: "title", widget: "string"}
+      - {label: "รายละเอียด", name: "body", widget: "markdown"}
+      - {label: "รูปภาพ", name: "image", widget: "image", required: false}
+      - {label: "ลิงก์ GitHub", name: "github_url", widget: "string", required: false}
+      - {label: "ลิงก์ App Store", name: "app_url", widget: "string", required: false}
