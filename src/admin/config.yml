@@ -1,0 +1,20 @@
+config.ymlbackend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "projects"
+    label: "ผลงาน"
+    folder: "src/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "ชื่อผลงาน", name: "title", widget: "string" }
+      - { label: "วันที่", name: "date", widget: "datetime" }
+      - { label: "รูปปก", name: "thumbnail", widget: "image", required: false }
+      - { label: "หมวดหมู่", name: "category", widget: "string" }
+      - { label: "ลิงก์", name: "link", widget: "string", required: false }
+      - { label: "รายละเอียด", name: "body", widget: "markdown" }

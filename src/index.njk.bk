@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: My Portfolio
+---
+<h1>{{ title }}</h1>
+<div class="projects">
+{% for project in collections.projects %}
+  <div class="card">
+    {% if project.data.thumbnail %}
+      <img src="{{ project.data.thumbnail }}" alt="{{ project.data.title }}" />
+    {% endif %}
+    <h2>{{ project.data.title }}</h2>
+    <p>{{ project.data.category }}</p>
+    <a href="{{ project.data.link }}">ดูโปรเจกต์</a>
+    <div>{{ project.templateContent | safe }}</div>
+  </div>
+{% endfor %}
+</div>

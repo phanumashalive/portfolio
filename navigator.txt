@@ -1,0 +1,13 @@
+/portfolio
+├── .eleventy.js
+├── package.json
+├── src/
+│   ├── _includes/
+│   │   └── base.njk
+│   ├── index.njk
+│   ├── admin/
+│   │   ├── index.html
+│   │   └── config.yml
+│   └── images/
+├── public/       (สร้างเอง หรือจะให้ Git track ก็ได้ แต่มัก gitignore)
+└── .gitignore
